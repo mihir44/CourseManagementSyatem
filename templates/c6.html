@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+
+{% block body %}
+
 <head>
 	<title>Web Development</title>
 	<meta charset="utf-8">
@@ -102,11 +104,11 @@ Body{text-align:justify;}
 	</div>
 	<div class="video-container">
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/gBi8Obib0tw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
+	</div> <br><br>
+	<embed src ="static/website_development_tutorial.pdf" width="100%" height="157%" /> <br> <br>
 	<!-- <a href="abc.pdf" download> </a> -->
-	<div id='back'><a href="catalog"><button type="submit" class="btn" >Back to Courses</button></a></div>
+	<div id='back'><a href="catalog"><button type="submit" class="btn" >Back to Courses</button></a></div><br> <br>
 
 </div>
 
-</body>
-</html>
+{% endblock body %}
