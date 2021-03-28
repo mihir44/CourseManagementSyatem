@@ -1,3 +1,4 @@
+from django.contrib import auth
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth import logout
@@ -7,8 +8,6 @@ from django.db import models
 # Maria@20
 # Create your views here.
 def index(request):
-    if request.user.is_anonymous:
-        return redirect("/login1.html")
     return render(request, 'index.html')
 
 
@@ -27,6 +26,10 @@ def loginU(request):
         else:
             return render(request, 'login.html')
     return render(request, 'login.html')
+
+def logoutU(request):
+    auth.logout(request)
+    return render(request, 'index.html')
 
 
 def aboutus(request):
